@@ -1,6 +1,6 @@
 dependencies {
   compile 'org.springframework.boot:spring-boot-starter-security'
   compile 'org.springframework.boot:spring-boot-starter-web'
-  compile 'de.codecentric:spring-boot-admin-starter-client:1.4.1'
+  compile 'de.codecentric:spring-boot-admin-starter-client:1.4.6'
   compile 'org.springframework.security.oauth:spring-security-oauth2'
 }
