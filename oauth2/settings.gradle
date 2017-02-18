@@ -1,0 +1,6 @@
+rootProject.name = 'sample-oauth2'
+
+include 'admin-server'
+include 'authorization-server'
+include 'resource-server'
+

@@ -1,0 +1,42 @@
+buildscript {
+  ext {
+    springBootVersion = '1.4.4.RELEASE'
+  }
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
+}
+
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.github.joshiste.spring-boot-admin-samples'
+  version = '1.0.0-SNAPSHOT'
+}
+
+subprojects {
+  apply plugin: 'java'
+  apply plugin: 'eclipse'
+  apply plugin: 'idea'
+  apply plugin: 'org.springframework.boot'
+
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+  }
+  
+  repositories {
+    mavenCentral()
+  }
+
+  dependencyManagement {
+    imports {
+      mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Camden.SR5'
+    }
+  }
+}

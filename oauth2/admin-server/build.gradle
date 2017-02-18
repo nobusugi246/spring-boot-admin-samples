@@ -1,0 +1,8 @@
+dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-security'
+  compile 'org.springframework.cloud:spring-cloud-starter-oauth2'
+  compile 'org.springframework.security.oauth:spring-security-oauth2'
+
+  compile 'de.codecentric:spring-boot-admin-server:1.4.6'
+  compile 'de.codecentric:spring-boot-admin-server-ui:1.4.6'
+}
